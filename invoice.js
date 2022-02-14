@@ -49,8 +49,8 @@ document.getElementById('addbtn').addEventListener('click',function()
     }
     document.getElementById('sub-total').innerText=subtotal
   const tx=  document.getElementById('tax').innerText=(parseFloat(subtotal)*.2).toFixed(2)
-  const altotal=document.getElementById('grand-total').innerText=parseInt((tx+subtotal))
-  document.getElementById('taxalltotal').innerText=parseInt(altotal )
+  const altotal=document.getElementById('grand-total').innerText=parseFloat(subtotal) +parseFloat(tx)
+  document.getElementById('taxalltotal').innerText=parseFloat(altotal )
 
 }
     
